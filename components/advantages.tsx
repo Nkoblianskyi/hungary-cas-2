@@ -48,10 +48,10 @@ export function Advantages() {
                 ) : null}
               </div>
               <div>
-                <div className="text-white font-semibold text-xs md:text-sm">
+                <div className="text-white font-semibold text-[8px] md:text-sm">
                   {item.title}
                 </div>
-                <div className="text-gray-400 text-[10px] md:text-xs">
+                <div className="text-gray-400 text-[8px] md:text-xs">
                   {item.description}
                 </div>
               </div>

@@ -114,10 +114,10 @@ export function CasinoRankings() {
                   </div>
 
                   {/* Mobile: Second Row - Rating + Stars/Reviews + Button */}
-                  <div className="flex md:hidden items-center gap-3 justify-between">
+                  <div className="flex md:hidden items-center gap-8 justify-center">
                     {/* Rating */}
-                    <div className="flex-shrink-0">
-                      <span className="text-white font-bold text-xl">{casino.rating.toFixed(1)}</span>
+                    <div className="flex-shrink-0 text-center items-center justify-center">
+                      <span className="text-white font-bold text-3xl">{casino.rating.toFixed(1)}</span>
                     </div>
                     
                     {/* Stars + Reviews */}
@@ -131,7 +131,7 @@ export function CasinoRankings() {
                     {/* Button */}
                     <div className="flex-shrink-0">
                       <Button
-                        className={`font-bold px-6 py-3 text-xs transition-all duration-300 ${
+                        className={`font-bold px-12 py-3 text-xs transition-all duration-300 ${
                           casino.rank === 1
                             ? "bg-yellow-500 hover:bg-yellow-600 text-black"
                             : "bg-red-600 hover:bg-red-700 text-white"
