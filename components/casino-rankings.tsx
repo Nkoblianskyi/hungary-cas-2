@@ -64,9 +64,9 @@ export function CasinoRankings() {
           {casinos.map((casino) => (
             <Card
               key={casino.rank}
-              className={`border cursor-pointer transition-all duration-300 hover:border-yellow-500/50 relative overflow-hidden ${
+              className={`border-2 cursor-pointer transition-all duration-300 hover:border-yellow-500/80 relative overflow-hidden ${
                 casino.rank === 1
-                  ? "border-yellow-500/50 bg-gradient-to-r from-zinc-900 to-black"
+                  ? "border-yellow-500/80 bg-gradient-to-r from-zinc-900 to-black"
                   : "border-gray-800 bg-gradient-to-r from-zinc-900 to-black"
               }`}
               onClick={() => handleCardClick(casino.url)}
