@@ -151,14 +151,14 @@ export function CasinoRankings() {
                   <div className="hidden md:flex items-center gap-8">
                     {/* Logo */}
                     <div className="flex-shrink-0">
-                      <div className="bg-black rounded-lg p-4 border border-white/10">
+                      <div className="bg-black h-36 items-center flex rounded-lg p-4 border border-white/10">
                         <img
                           src={casino.logo || "/placeholder.svg"}
                           alt={`${casino.name} logo`}
                           loading="lazy"
                           width={256}
                           height={200}
-                          className="h-56  w-auto mx-auto"
+                          className="h-26 object-contain mx-auto"
                         />
                       </div>
                     </div>
