@@ -94,11 +94,11 @@ export function CasinoRankings() {
                   <div className="flex md:hidden items-center gap-4 mb-4">
                     {/* Logo */}
                     <div className="flex-shrink-0">
-                      <div className="bg-white/5 rounded-lg p-3 border border-white/10">
+                      <div className="bg-black rounded-lg p-3 border border-white/10">
                         <img
                           src={casino.logo || "/placeholder.svg"}
                           alt={`${casino.name} logo`}
-                          className="h-16 object-contain w-auto max-w-[120px]"
+                          className="h-20 object-contain w-auto max-w-[140px]"
                         />
                       </div>
                     </div>
@@ -151,7 +151,7 @@ export function CasinoRankings() {
                   <div className="hidden md:flex items-center gap-8">
                     {/* Logo */}
                     <div className="flex-shrink-0">
-                      <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                      <div className="bg-black rounded-lg p-4 border border-white/10">
                         <img
                           src={casino.logo || "/placeholder.svg"}
                           alt={`${casino.name} logo`}
