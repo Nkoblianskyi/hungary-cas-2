@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { casinos } from "@/data/casinos"
+import Image from 'next/image'
 
 /** Рендер однієї частково заповненої зірки */
 function PartialStar({
@@ -154,7 +155,10 @@ export function CasinoRankings() {
                         <img
                           src={casino.logo || "/placeholder.svg"}
                           alt={`${casino.name} logo`}
-                          className="h-24 object-contain max-w-[200px] w-auto"
+                          loading="lazy"
+                          width={256}
+                          height={200}
+                          className="h-56  w-auto mx-auto"
                         />
                       </div>
                     </div>

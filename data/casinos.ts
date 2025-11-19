@@ -15,7 +15,7 @@ export const casinos: Casino[] = [
   {
     rank: 1,
     name: "Billionaire Spin",
-    logo: "/billionairespin_dark_1200x400.png",
+    logo: "/Billionairespin_dark_1200x400.png",
     rating: 9.8,
     bonus: "Até 1.500€ + 250 Rodadas Grátis",
     features: ["Levantamentos Rápidos", "App Móvel", "15% Cashback"],
@@ -26,7 +26,7 @@ export const casinos: Casino[] = [
   {
     rank: 2,
     name: "Spinogambino",
-    logo: "/spinogambino_dark_1200x400.png",
+    logo: "/Spinogambino_dark_1200x400.png",
     rating: 9.7,
     bonus: "Até 1.500€ + 250 Rodadas Grátis",
     features: ["Casino Móvel", "Jogos Exclusivos", "Apostas Desportivas"],

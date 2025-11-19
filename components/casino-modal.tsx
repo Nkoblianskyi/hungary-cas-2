@@ -66,7 +66,10 @@ export function CasinoModal() {
                 <img
                   src={topCasino.logo || "/placeholder.svg"}
                   alt={`${topCasino.name} logo`}
-                  className="h-14 sm:h-20 w-auto mx-auto"
+                  loading="lazy"
+                  width={256}
+                  height={170}
+                  className="h-24 sm:h-28 w-auto mx-auto"
                 />
               </div>
             </div>
@@ -76,9 +79,8 @@ export function CasinoModal() {
                 Bónus de Boas-Vindas Exclusivo
               </p>
               <div className="text-base sm:text-lg md:text-xl font-bold space-y-1">
-                <div className="text-yellow-400">700% até €10 000</div>
-                <div className="text-yellow-400">+ 725 Rodadas Grátis</div>
-                <div className="text-yellow-400">+ CashBack Até 15%</div>
+                <div className="text-yellow-400">Até 1.500€</div>
+                <div className="text-yellow-400">+ 250 Rodadas Grátis</div>
               </div>
             </div>
 
