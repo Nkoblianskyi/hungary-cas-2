@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { getTopCasino } from "@/data/casinos"
+import Link from 'next/link'
 
 /** Рендер однієї частково заповненої зірки */
 function PartialStar({
@@ -83,10 +84,6 @@ export function HowWeRank() {
 
   const topCasino = getTopCasino()
 
-  const handleCardClick = (url: string) => {
-    window.open(url, "_blank", "noopener,referrer")
-  }
-
   return (
     <section className="py-12 md:py-16 bg-black">
       <div className="container mx-auto px-4">
@@ -139,10 +136,14 @@ export function HowWeRank() {
         </div>
 
         <div className="space-y-3 md:space-y-4 max-w-6xl mx-auto">
-          <Card
-            className="border cursor-pointer transition-all duration-300 hover:border-yellow-500/50 border-yellow-500/50 relative overflow-hidden"
-            onClick={() => handleCardClick(topCasino.url)}
+          <Link
+            href={topCasino.url}
+            target="_blank"
+            rel="noopener noreferrer"
           >
+            <Card
+              className="border cursor-pointer transition-all duration-300 hover:border-yellow-500/50 border-yellow-500/50 relative overflow-hidden"
+            >
             <div 
               className="absolute inset-0 opacity-30"
               style={{
@@ -164,7 +165,7 @@ export function HowWeRank() {
               <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 pt-6 md:pt-0">
                 
                 <div className="flex-shrink-0 w-full md:w-auto">
-                  <div className="bg-white/5 rounded-lg p-4 border border-white/10 mx-auto md:mx-0 w-fit">
+                  <div className="bg-black flex items-center rounded-lg p-4 border border-white/10 mx-auto md:mx-0 w-fit">
                     <img
                       src={topCasino.logo || "/placeholder.svg"}
                       alt={`${topCasino.name} logo`}
@@ -195,10 +196,6 @@ export function HowWeRank() {
                 <div className="flex-shrink-0 w-full md:w-auto">
                   <Button
                     className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-8 py-4 text-sm w-full md:w-auto transition-all duration-300"
-                    onClick={(e) => {
-                      e.stopPropagation()
-                      handleCardClick(topCasino.url)
-                    }}
                   >
                     JOGAR AGORA
                   </Button>
@@ -206,6 +203,7 @@ export function HowWeRank() {
               </div>
             </CardContent>
           </Card>
+          </Link>
         </div>
       </div>
     </section>

@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { casinos } from "@/data/casinos"
 import Image from 'next/image'
+import Link from 'next/link'
 
 /** Рендер однієї частково заповненої зірки */
 function PartialStar({
@@ -52,26 +53,26 @@ function StarRating({
 }
 
 export function CasinoRankings() {
-  const handleCardClick = (url: string) => {
-    window.open(url, "_blank", "noopener,referrer")
-  }
-
   return (
     <section id="rankings" className="py-8 md:py-12 bg-black">
       <div className="container mx-auto px-4">
         
 
-        <div className="space-y-3 md:space-y-4 max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {casinos.map((casino) => (
-            <Card
+            <Link
               key={casino.rank}
-              className={`border-2 cursor-pointer transition-all duration-300 hover:border-yellow-500/80 relative overflow-hidden ${
-                casino.rank === 1
-                  ? "border-yellow-500/80 bg-gradient-to-r from-zinc-900 to-black"
-                  : "border-gray-800 bg-gradient-to-r from-zinc-900 to-black"
-              }`}
-              onClick={() => handleCardClick(casino.url)}
+              href={casino.url}
+              target="_blank"
+              rel="noopener referrer"
             >
+              <Card
+                className={`border-2 cursor-pointer transition-all duration-300 hover:border-yellow-500/80 relative overflow-hidden mb-6 md:mb-8 ${
+                  casino.rank === 1
+                    ? "border-yellow-500/80 bg-gradient-to-r from-zinc-900 to-black"
+                    : "border-gray-800 bg-gradient-to-r from-zinc-900 to-black"
+                }`}
+              >
               <CardContent className="p-5 md:p-8 relative z-10">
                 {casino.rank === 1 && (
                   <Badge className="absolute top-0 left-0 bg-yellow-500 text-black font-bold text-xs px-3 py-1 rounded-tl-lg rounded-br-lg">
@@ -115,7 +116,7 @@ export function CasinoRankings() {
                   </div>
 
                   {/* Mobile: Second Row - Rating + Stars/Reviews + Button */}
-                  <div className="flex md:hidden items-center gap-8 justify-center">
+                  <div className="flex md:hidden items-center gap-4 justify-between px-2">
                     {/* Rating */}
                     <div className="flex-shrink-0 text-center items-center justify-center">
                       <span className="text-white font-bold text-3xl">{casino.rating.toFixed(1)}</span>
@@ -137,10 +138,6 @@ export function CasinoRankings() {
                             ? "bg-yellow-500 hover:bg-yellow-600 text-black"
                             : "bg-red-600 hover:bg-red-700 text-white"
                         }`}
-                        onClick={(e) => {
-                          e.stopPropagation()
-                          handleCardClick(casino.url)
-                        }}
                       >
                         JOGAR
                       </Button>
@@ -193,10 +190,6 @@ export function CasinoRankings() {
                             ? "bg-yellow-500 hover:bg-yellow-600 text-black"
                             : "bg-red-600 hover:bg-red-700 text-white"
                         }`}
-                        onClick={(e) => {
-                          e.stopPropagation()
-                          handleCardClick(casino.url)
-                        }}
                       >
                         JOGAR AGORA
                       </Button>
@@ -205,6 +198,7 @@ export function CasinoRankings() {
                 </div>
               </CardContent>
             </Card>
+            </Link>
           ))}
         </div>
 

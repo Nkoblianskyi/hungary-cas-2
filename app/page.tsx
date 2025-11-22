@@ -3,7 +3,6 @@ import { Hero } from "@/components/hero"
 import { CasinoRankings } from "@/components/casino-rankings"
 import { HowWeRank } from "@/components/how-we-rank"
 import { Footer } from "@/components/footer"
-import { CasinoModal } from "@/components/casino-modal"
 import Script from "next/script"
 
 export default function HomePage() {
@@ -16,7 +15,6 @@ export default function HomePage() {
         <CasinoRankings />
         <HowWeRank />
         <Footer />
-        <CasinoModal />
       </div>
     </>
   )
