@@ -17,7 +17,7 @@ export const casinos: Casino[] = [
     name: "Blitz",
     logo: "/blitz.svg",
     rating: 9.8,
-    bonus: "Até 1.500€ + 250 Rodadas Grátis",
+    bonus: "100% até 500€ + 100 Rodadas Grátis",
     features: ["Levantamentos Rápidos", "App Móvel", "15% Cashback"],
     isTopChoice: true,
     url: "https://qualityboost.top/Qqb39Lv8",
