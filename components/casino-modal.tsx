@@ -79,8 +79,8 @@ export function CasinoModal() {
                 Bónus de Boas-Vindas Exclusivo
               </p>
               <div className="text-base sm:text-lg md:text-xl font-bold space-y-1">
-                <div className="text-yellow-400">Até 1.500€</div>
-                <div className="text-yellow-400">+ 250 Rodadas Grátis</div>
+                <div className="text-yellow-400">100% até 500€</div>
+                <div className="text-yellow-400">+ 100 Rodadas Grátis</div>
               </div>
             </div>
 
