@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { casinos } from "@/data/casinos"
-import Image from 'next/image'
 import Link from 'next/link'
 
 /** Рендер однієї частково заповненої зірки */
@@ -54,7 +53,7 @@ function StarRating({
 
 export function CasinoRankings() {
   return (
-    <section id="rankings" className="py-8 md:py-12 bg-black">
+    <section id="rankings" className="py-2 md:py-4 bg-black">
       <div className="container mx-auto px-4">
         
 
@@ -67,13 +66,13 @@ export function CasinoRankings() {
               rel="noopener referrer"
             >
               <Card
-                className={`border-2 cursor-pointer transition-all duration-300 hover:border-yellow-500/80 relative overflow-hidden mb-6 md:mb-8 ${
+                className={`border-2 cursor-pointer transition-all duration-300 hover:border-yellow-500/80 relative overflow-hidden mb-2.5 md:mb-8 ${
                   casino.rank === 1
                     ? "border-yellow-500/80 bg-gradient-to-r from-zinc-900 to-black"
                     : "border-gray-800 bg-gradient-to-r from-zinc-900 to-black"
                 }`}
               >
-              <CardContent className="p-5 md:p-8 relative z-10">
+              <CardContent className="p-3 md:p-8 relative z-10">
                 {casino.rank === 1 && (
                   <Badge className="absolute top-0 left-0 bg-yellow-500 text-black font-bold text-xs px-3 py-1 rounded-tl-lg rounded-br-lg">
                     MELHOR CASINO
@@ -90,42 +89,51 @@ export function CasinoRankings() {
                   </Badge>
                 )}
                 
-                <div className="pt-6 md:pt-0">
+                <div
+                  className={
+                    casino.rank <= 3 ? "pt-7 md:pt-0" : "pt-1 md:pt-0"
+                  }
+                >
                   {/* Mobile: First Row - Logo + Bonus */}
-                  <div className="flex md:hidden items-center gap-4 mb-4">
+                  <div className="flex md:hidden items-center gap-2 mb-2">
                     {/* Logo */}
                     <div className="flex-shrink-0">
-                      <div className="bg-black rounded-lg p-3 border border-white/10">
+                      <div className="bg-black rounded-md p-1.5 border border-white/10">
                         <img
                           src={casino.logo || "/placeholder.svg"}
                           alt={`${casino.name} logo`}
-                          className="h-20 object-contain w-auto max-w-[140px]"
+                          className="h-12 object-contain w-auto max-w-[100px]"
                         />
                       </div>
                     </div>
                     
                     {/* Bonus */}
-                    <div className="flex-1 text-center">
-                      <div className="text-xs text-gray-400 mb-1 uppercase tracking-wide">
+                    <div className="flex-1 text-center min-w-0">
+                      <div className="text-[9px] text-gray-400 mb-0.5 uppercase tracking-wide">
                         Bónus de Boas-Vindas
                       </div>
-                      <div className="text-yellow-500 font-bold text-lg">
+                      <div className="text-yellow-500 font-bold text-xs leading-tight">
                         {casino.bonus}
                       </div>
+                      {casino.dopBonus ? (
+                        <div className="text-yellow-500/90 font-semibold text-[10px] leading-tight mt-0.5">
+                          {casino.dopBonus}
+                        </div>
+                      ) : null}
                     </div>
                   </div>
 
                   {/* Mobile: Second Row - Rating + Stars/Reviews + Button */}
-                  <div className="flex md:hidden items-center gap-4 justify-between px-2">
+                  <div className="flex md:hidden items-center gap-2 justify-between px-0.5">
                     {/* Rating */}
                     <div className="flex-shrink-0 text-center items-center justify-center">
-                      <span className="text-white font-bold text-3xl">{casino.rating.toFixed(1)}</span>
+                      <span className="text-white font-bold text-xl">{casino.rating.toFixed(1)}</span>
                     </div>
                     
                     {/* Stars + Reviews */}
-                    <div className="flex flex-col items-center gap-1">
-                      <StarRating rating10={casino.rating} size="h-4 w-4" gapClass="gap-0.5" />
-                      <div className="text-gray-400 text-xs whitespace-nowrap">
+                    <div className="flex flex-col items-center gap-0.5 min-w-0">
+                      <StarRating rating10={casino.rating} size="h-3 w-3" gapClass="gap-px" />
+                      <div className="text-gray-400 text-[9px] whitespace-nowrap">
                         {casino.reviewCount} avaliações
                       </div>
                     </div>
@@ -133,7 +141,7 @@ export function CasinoRankings() {
                     {/* Button */}
                     <div className="flex-shrink-0">
                       <Button
-                        className={`font-bold px-12 py-3 text-xs transition-all duration-300 ${
+                        className={`font-bold px-5 py-2 h-auto text-[10px] transition-all duration-300 ${
                           casino.rank === 1
                             ? "bg-yellow-500 hover:bg-yellow-600 text-black"
                             : "bg-red-600 hover:bg-red-700 text-white"
@@ -161,13 +169,18 @@ export function CasinoRankings() {
                     </div>
 
                     {/* Bonus */}
-                    <div className="flex-1 text-center">
+                    <div className="flex-1 text-center min-w-0">
                       <div className="text-xs text-gray-400 mb-2 uppercase tracking-wide">
                         Bónus de Boas-Vindas
                       </div>
                       <div className="text-yellow-500 font-bold text-2xl">
                         {casino.bonus}
                       </div>
+                      {casino.dopBonus ? (
+                        <div className="text-yellow-500/90 font-semibold text-sm mt-1">
+                          {casino.dopBonus}
+                        </div>
+                      ) : null}
                     </div>
 
                     {/* Rating, Reviews, Stars */}

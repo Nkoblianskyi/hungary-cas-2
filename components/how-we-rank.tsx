@@ -174,13 +174,18 @@ export function HowWeRank() {
                   </div>
                 </div>
 
-                <div className="flex-1 text-center">
+                <div className="flex-1 text-center min-w-0">
                   <div className="text-xs text-gray-400 mb-2 uppercase tracking-wide">
                     Bónus de Boas-Vindas
                   </div>
                   <div className="text-yellow-500 font-bold text-xl md:text-2xl">
                     {topCasino.bonus}
                   </div>
+                  {topCasino.dopBonus ? (
+                    <div className="text-yellow-500/90 font-semibold text-sm md:text-base mt-1">
+                      {topCasino.dopBonus}
+                    </div>
+                  ) : null}
                 </div>
 
                 <div className="flex flex-col items-center gap-2">

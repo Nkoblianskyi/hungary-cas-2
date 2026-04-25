@@ -79,8 +79,12 @@ export function CasinoModal() {
                 Bónus de Boas-Vindas Exclusivo
               </p>
               <div className="text-base sm:text-lg md:text-xl font-bold space-y-1">
-                <div className="text-yellow-400">100% até 500€</div>
-                <div className="text-yellow-400">+ 100 Rodadas Grátis</div>
+                <div className="text-yellow-400">{topCasino.bonus}</div>
+                {topCasino.dopBonus ? (
+                  <div className="text-yellow-400/95 text-sm sm:text-base font-semibold">
+                    {topCasino.dopBonus}
+                  </div>
+                ) : null}
               </div>
             </div>
 

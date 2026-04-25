@@ -77,7 +77,7 @@ export function Footer() {
         </div>
 
         <p className="text-gray-500 text-sm text-center">
-          © 2025 Melhores Casinos Portugal. Todos os direitos reservados. | Jogo Responsável
+          © 2026 Melhores Casinos Portugal. Todos os direitos reservados. | Jogo Responsável
         </p>
       </div>
     </footer>

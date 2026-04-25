@@ -27,31 +27,31 @@ export function Advantages() {
   ]
 
   return (
-    <div className="grid grid-cols-4 md:grid-cols-4 gap-3 md:gap-4 max-w-4xl mx-auto">
+    <div className="grid grid-cols-4 gap-1 md:gap-4 max-w-4xl mx-auto">
       {advantages.map((item, index) => {
         const Icon = item.icon
         return (
           <div
             key={index}
-            className="p-3 md:p-4"
+            className="p-0.5 md:p-4 min-w-0"
           >
-            <div className="flex flex-col items-center text-center gap-1.5 md:gap-2">
-              <div className="bg-yellow-500/10 rounded-full p-2 md:p-2.5">
+            <div className="flex flex-col items-center text-center gap-0.5 md:gap-2">
+              <div className="bg-yellow-500/10 rounded-full p-1 md:p-2.5">
                 {item.imageUrl ? (
                   <img 
                     src={item.imageUrl || "/placeholder.svg"} 
                     alt={item.title}
-                    className="h-4 w-4 md:h-5 md:w-5"
+                    className="h-3 w-3 md:h-5 md:w-5"
                   />
                 ) : Icon ? (
-                  <Icon className="h-4 w-4 md:h-5 md:w-5 text-yellow-500" />
+                  <Icon className="h-3 w-3 md:h-5 md:w-5 text-yellow-500" />
                 ) : null}
               </div>
-              <div>
-                <div className="text-white font-semibold text-[8px] md:text-sm">
+              <div className="min-w-0 w-full">
+                <div className="text-white font-semibold text-[7px] leading-tight md:text-sm">
                   {item.title}
                 </div>
-                <div className="text-gray-400 text-[8px] md:text-xs">
+                <div className="hidden md:block text-gray-400 text-[7px] leading-tight md:text-xs mt-0.5">
                   {item.description}
                 </div>
               </div>
