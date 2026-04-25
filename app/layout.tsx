@@ -8,9 +8,9 @@ import Script from "next/script"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Melhores Casinos Online Portugal 2026 | Sites de Casino Mais Bem Avaliados",
+  title: "Melhores Casinos Portugal 2026 | Sites de Casino Mais Bem Avaliados",
   description:
-    "Descubra os melhores casinos online em Portugal para 2026. Compare bónus, avaliações e funcionalidades dos sites de casino mais bem avaliados. Operadores licenciados com saques rápidos e suporte 24/7.",
+    "Descubra os melhores casinos em Portugal para 2026. Compare bónus, avaliações e funcionalidades dos sites de casino mais bem avaliados. Operadores licenciados com saques rápidos e suporte 24/7.",
 }
 
 export default function RootLayout({
