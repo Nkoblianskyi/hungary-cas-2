@@ -21,7 +21,7 @@ export const casinos: Casino[] = [
     dopBonus: "Pacote de boas-vindas",
     features: ["Levantamentos Rápidos", "App Móvel", "Bónus generosos"],
     isTopChoice: true,
-    url: "https://qualityboost.top/18Gwf4MC",
+    url: "https://qualityboost.top/8hvVP38N",
     reviewCount: 2847,
   },
   {
@@ -32,7 +32,7 @@ export const casinos: Casino[] = [
     bonus: "100% até 1000 €",
     dopBonus: "+ 300 RG + JOGO DE BÓNUS",
     features: ["Segurança", "Bónus verificados", "Suporte PT"],
-    url: "https://qualityboost.top/29pZ3tjZ",
+    url: "https://qualityboost.top/3yPb3Xk8",
     reviewCount: 2156,
   },
   {
@@ -43,7 +43,7 @@ export const casinos: Casino[] = [
     bonus: "1500 EUR + 150 FS",
     dopBonus: "Pacote de boas-vindas",
     features: ["Slots", "Live Casino", "Pagamentos rápidos"],
-    url: "https://qualityboost.top/1Wq7B45C",
+    url: "https://qualityboost.top/N4hyPFT1",
     reviewCount: 1980,
   },
   {
