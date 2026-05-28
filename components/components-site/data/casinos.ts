@@ -4,61 +4,105 @@ export interface Casino {
   logo: string
   rating: number
   bonus: string
-  dopBonus?: string
   features: string[]
   isTopChoice?: boolean
   url: string
-  reviewCount: number
 }
 
-export const casinos: Casino[] = [
+interface BaseCasino {
+  name: string
+  logo: string
+  bonus: string
+  features: string[]
+  url: string
+}
+
+const bonusHungary = "250% akár 1.200.000 Ft + 350 IP + 1 Bonus Crab"
+
+const baseCasinos: BaseCasino[] = [
   {
-    rank: 1,
-    name: "22bet",
-    logo: "/22bet.svg",
-    rating: 9.8,
-    bonus: "1500 EUR + 150 FS",
-    dopBonus: "Pacote de boas-vindas",
-    features: ["Levantamentos Rápidos", "App Móvel", "Bónus generosos"],
-    isTopChoice: true,
-    url: "https://qualityboost.top/8hvVP38N",
-    reviewCount: 2847,
+    name: "VegasHero",
+    logo: "/vegashero.webp",
+    bonus: "100% akár 200.000 Ft + 200 IP",
+    features: ["Jackpot játékok", "Vegas hangulat", "Gyors fizetés"],
+    url: "https://qualityboost.top/L1KQGHC7",
   },
   {
-    rank: 2,
-    name: "SAFECASINO",
-    logo: "/safecasino.png",
-    rating: 9.7,
-    bonus: "100% até 1000 €",
-    dopBonus: "+ 300 RG + JOGO DE BÓNUS",
-    features: ["Segurança", "Bónus verificados", "Suporte PT"],
-    url: "https://qualityboost.top/3yPb3Xk8",
-    reviewCount: 2156,
+    name: "Casoola",
+    logo: "/casola.png",
+    bonus: "100% akár 200.000 Ft + 200 IP",
+    features: ["Exkluzív bónuszok", "Élő kaszinó", "Gyors kifizetés"],
+    url: "https://qualityboost.top/gxXhrkX2",
   },
   {
-    rank: 3,
-    name: "BETLABET",
-    logo: "/betlabet.svg",
-    rating: 9.6,
-    bonus: "1500 EUR + 150 FS",
-    dopBonus: "Pacote de boas-vindas",
-    features: ["Slots", "Live Casino", "Pagamentos rápidos"],
-    url: "https://qualityboost.top/N4hyPFT1",
-    reviewCount: 1980,
+    name: "Lizaro",
+    logo: "/lizaro.webp",
+    bonus: "350% akár 6.400.000 Ft + 350 IP",
+    features: ["Mega bónusz", "Ingyenes pörgetések", "Gyors kifizetés"],
+    url: "https://qualityboost.top/WNWmW2ZK",
   },
   {
-    rank: 4,
-    name: "ZOMBILLION",
-    logo: "/zombillion.svg",
-    rating: 9.5,
-    bonus: "+100% BÔNUS ATÉ 1000 €",
-    features: ["Promoções", "Jogos variados", "Mobile"],
-    url: "https://qualityboost.top/FKnjwmbn",
-    reviewCount: 1721,
+    name: "Millioner",
+    logo: "/millioner.webp",
+    bonus: "200% akár 1.000.000 Ft + 300 IP",
+    features: ["VIP klub", "Élő kaszinó", "Magyar támogatás"],
+    url: "https://qualityboost.top/xQ4vxzBr",
+  },
+  {
+    name: "Alawin",
+    logo: "/alawin.webp",
+    bonus: "300% akár 800.000 Ft + 300 IP + 1 Bonus Crab",
+    features: ["Magas bónuszok", "Mobilbarát", "Heti promóciók"],
+    url: "https://qualityboost.top/rFQDQjBQ",
+  },
+  {
+    name: "Tikitaka",
+    logo: "/tikitaka.svg",
+    bonus: "100% akár 200.000 Ft + 200 IP",
+    features: ["Sportfogadás", "Versenyek", "24/7 támogatás"],
+    url: "https://qualityboost.top/CRJrjhG3",
+  },
+  {
+    name: "Funbet",
+    logo: "/funbet.svg",
+    bonus: "100% akár 200.000 Ft + 200 IP",
+    features: ["Sportfogadás", "Élő közvetítés", "Gyors regisztráció"],
+    url: "https://qualityboost.top/tX3WJV9N",
+  },
+  {
+    name: "Divaspin",
+    logo: "/divaspin.webp",
+    bonus: bonusHungary,
+    features: ["Reload bónusz", "Élő osztók", "24/7 ügyfélszolgálat"],
+    url: "https://qualityboost.top/jyZ2FpHD",
+  },
+  {
+    name: "Casea",
+    logo: "/casea.webp",
+    bonus: "350% akár 6.400.000 Ft + 350 IP",
+    features: ["Exkluzív játékok", "Élő osztók", "Cashback program"],
+    url: "https://qualityboost.top/mRsTtXgb",
+  },
+  {
+    name: "Astromania",
+    logo: "/astronomia.png",
+    bonus: bonusHungary,
+    features: ["Gyors kifizetések", "Élő kaszinó", "VIP program"],
+    url: "https://qualityboost.top/KbHS44T9",
   },
 ]
 
-// Get top casino (rank 1)
-export const getTopCasino = (): Casino => {
-  return casinos.find((casino) => casino.rank === 1) || casinos[0]
+const ratingsByRank = [9.8, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8]
+
+function assignRanks(list: BaseCasino[]): Casino[] {
+  return list.map((c, i) => ({
+    ...c,
+    rank: i + 1,
+    rating: ratingsByRank[i] ?? 8.5,
+    isTopChoice: i === 0,
+  }))
 }
+
+export const casinos: Casino[] = assignRanks(baseCasinos)
+
+export const getTopCasino = (): Casino => casinos[0]
