@@ -20,11 +20,11 @@
       },
       extend: {
         colors: {
-          border: "hsl(var(--border))",
-          input: "hsl(var(--input))",
-          ring: "hsl(var(--ring))",
-          background: "hsl(var(--background))",
-          foreground: "hsl(var(--foreground))",
+          border: "#262626",
+          input: "#262626",
+          ring: "#fbbf24",
+          background: "#0f0f0f",
+          foreground: "#fafafa",
           primary: {
             DEFAULT: "#fbbf24", // bright vibrant gold
             foreground: "#000000",
@@ -34,8 +34,8 @@
             foreground: "#ffffff",
           },
           destructive: {
-            DEFAULT: "hsl(var(--destructive))",
-            foreground: "hsl(var(--destructive-foreground))",
+            DEFAULT: "#ef4444", // red-500
+            foreground: "#fafafa",
           },
           muted: {
             DEFAULT: "#111827", // gray-900
@@ -46,8 +46,8 @@
             foreground: "#ffffff",
           },
           popover: {
-            DEFAULT: "hsl(var(--popover))",
-            foreground: "hsl(var(--popover-foreground))",
+            DEFAULT: "#141414",
+            foreground: "#fafafa",
           },
           card: {
             DEFAULT: "#111827", // gray-900
@@ -55,9 +55,9 @@
           },
         },
         borderRadius: {
-          lg: "var(--radius)",
-          md: "calc(var(--radius) - 2px)",
-          sm: "calc(var(--radius) - 4px)",
+          lg: "0.5rem",
+          md: "0.375rem",
+          sm: "0.25rem",
         },
         keyframes: {
           "accordion-down": {
