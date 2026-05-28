@@ -1,10 +1,10 @@
 "use client"
 
 import { Star } from 'lucide-react'
-import { Button } from "@/components/ui/button"
+import { Button } from "./ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { casinos } from "@/data/casinos"
+import { casinos } from "./data/casinos"
 import Link from 'next/link'
 
 /** Рендер однієї частково заповненої зірки */
@@ -75,17 +75,17 @@ export function CasinoRankings() {
               <CardContent className="p-3 md:p-8 relative z-10">
                 {casino.rank === 1 && (
                   <Badge className="absolute top-0 left-0 bg-yellow-500 text-black font-bold text-xs px-3 py-1 rounded-tl-lg rounded-br-lg">
-                    MELHOR CASINO
+                    LEGJOBB KASZINÓ
                   </Badge>
                 )}
                 {casino.rank === 2 && (
                   <Badge className="absolute top-0 left-0 bg-red-600 text-white font-bold text-xs px-3 py-1 rounded-tl-lg rounded-br-lg">
-                    RECOMENDADO
+                    AJÁNLOTT
                   </Badge>
                 )}
                 {casino.rank === 3 && (
                   <Badge className="absolute top-0 left-0 bg-red-600 text-white font-bold text-xs px-3 py-1 rounded-tl-lg rounded-br-lg">
-                    TENDÊNCIAS
+                    NÉPSZERŰ
                   </Badge>
                 )}
                 
@@ -110,16 +110,11 @@ export function CasinoRankings() {
                     {/* Bonus */}
                     <div className="flex-1 text-center min-w-0">
                       <div className="text-[9px] text-gray-400 mb-0.5 uppercase tracking-wide">
-                        Bónus de Boas-Vindas
+                        Üdvözlő bónusz
                       </div>
-                      <div className="text-yellow-500 font-bold text-xs leading-tight">
+                      <div className="text-yellow-500 font-bold text-[10px] sm:text-xs leading-tight">
                         {casino.bonus}
                       </div>
-                      {casino.dopBonus ? (
-                        <div className="text-yellow-500/90 font-semibold text-[10px] leading-tight mt-0.5">
-                          {casino.dopBonus}
-                        </div>
-                      ) : null}
                     </div>
                   </div>
 
@@ -133,9 +128,6 @@ export function CasinoRankings() {
                     {/* Stars + Reviews */}
                     <div className="flex flex-col items-center gap-0.5 min-w-0">
                       <StarRating rating10={casino.rating} size="h-3 w-3" gapClass="gap-px" />
-                      <div className="text-gray-400 text-[9px] whitespace-nowrap">
-                        {casino.reviewCount} avaliações
-                      </div>
                     </div>
                     
                     {/* Button */}
@@ -147,7 +139,7 @@ export function CasinoRankings() {
                             : "bg-red-600 hover:bg-red-700 text-white"
                         }`}
                       >
-                        JOGAR
+                        JÁTSSZ
                       </Button>
                     </div>
                   </div>
@@ -171,16 +163,11 @@ export function CasinoRankings() {
                     {/* Bonus */}
                     <div className="flex-1 text-center min-w-0">
                       <div className="text-xs text-gray-400 mb-2 uppercase tracking-wide">
-                        Bónus de Boas-Vindas
+                        Üdvözlő bónusz
                       </div>
-                      <div className="text-yellow-500 font-bold text-2xl">
+                      <div className="text-yellow-500 font-bold text-lg md:text-2xl leading-tight">
                         {casino.bonus}
                       </div>
-                      {casino.dopBonus ? (
-                        <div className="text-yellow-500/90 font-semibold text-sm mt-1">
-                          {casino.dopBonus}
-                        </div>
-                      ) : null}
                     </div>
 
                     {/* Rating, Reviews, Stars */}
@@ -188,10 +175,6 @@ export function CasinoRankings() {
                     <span className="text-white font-bold text-2xl">{casino.rating.toFixed(1)}</span>
                       <div className="flex items-center gap-3">
                         <StarRating rating10={casino.rating} size="h-5 w-5" gapClass="gap-1" />
-                        
-                      </div>
-                      <div className="text-gray-400 text-sm">
-                        {casino.reviewCount} avaliações
                       </div>
                     </div>
 
@@ -204,7 +187,7 @@ export function CasinoRankings() {
                             : "bg-red-600 hover:bg-red-700 text-white"
                         }`}
                       >
-                        JOGAR AGORA
+                        JÁTSSZ MOST
                       </Button>
                     </div>
                   </div>
@@ -217,7 +200,7 @@ export function CasinoRankings() {
 
         <div className="text-center mt-8 md:mt-12">
           <p className="text-gray-500 text-xs md:text-sm">
-            * Aplicam-se os Termos e Condições. O jogo pode causar dependência. +18
+            * A feltételek érvényesek. A szerencsejáték függőséget okozhat. +18
           </p>
         </div>
       </div>

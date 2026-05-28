@@ -5,24 +5,24 @@ import { Shield, Zap, Trophy, Clock } from 'lucide-react'
 export function Advantages() {
   const advantages = [
     {
-      imageUrl: "/flag.png",
-      title: "Licenciados",
-      description: "100% Seguros",
+      icon: Shield,
+      title: "Licencelt",
+      description: "100% biztonságos",
     },
     {
       icon: Zap,
-      title: "Saques Rápidos",
-      description: "Até 24h",
+      title: "Gyors kifizetés",
+      description: "Akár 24 órán belül",
     },
     {
       icon: Trophy,
-      title: "Melhores Bónus",
-      description: "Verificados",
+      title: "Legjobb bónuszok",
+      description: "Ellenőrzött",
     },
     {
       icon: Clock,
-      title: "Suporte 24/7",
-      description: "Em Português",
+      title: "24/7 támogatás",
+      description: "Magyar nyelven",
     },
   ]
 

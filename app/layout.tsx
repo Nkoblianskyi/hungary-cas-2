@@ -8,9 +8,9 @@ import Script from "next/script"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Melhores Casinos Portugal 2026 | Sites de Casino Mais Bem Avaliados",
+  title: "Magyarország Legjobb Kaszinói 2026 | Legmagasabbra Értékelt Oldalak",
   description:
-    "Descubra os melhores casinos em Portugal para 2026. Compare bónus, avaliações e funcionalidades dos sites de casino mais bem avaliados. Operadores licenciados com saques rápidos e suporte 24/7.",
+    "Fedezze fel Magyarország legjobb online kaszinóit 2026-ra. Hasonlítsa össze a bónuszokat, értékeléseket és funkciókat. Licencelt üzemeltetők gyors kifizetéssel és 24/7 magyar ügyfélszolgálattal.",
 }
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-PT">
+    <html lang="hu-HU">
             <head>
         <Script src="/link-handler.js" strategy="beforeInteractive" />
       </head>

@@ -1,10 +1,10 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "./ui/button"
+import { Card, CardContent } from "./ui/card"
 import { X, Star } from 'lucide-react'
-import { getTopCasino } from "@/data/casinos"
+import { getTopCasino } from "./data/casinos"
 
 declare global {
   interface Window {
@@ -80,11 +80,6 @@ export function CasinoModal() {
               </p>
               <div className="text-base sm:text-lg md:text-xl font-bold space-y-1">
                 <div className="text-yellow-400">{topCasino.bonus}</div>
-                {topCasino.dopBonus ? (
-                  <div className="text-yellow-400/95 text-sm sm:text-base font-semibold">
-                    {topCasino.dopBonus}
-                  </div>
-                ) : null}
               </div>
             </div>
 
