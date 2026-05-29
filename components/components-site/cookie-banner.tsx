@@ -34,12 +34,12 @@ export function CookieBanner() {
           <div className="flex items-start space-x-3">
             <Cookie className="h-6 w-6 text-yellow-500 mt-1 flex-shrink-0" />
             <div>
-              <h4 className="text-white font-semibold mb-1">Utilizamos Cookies</h4>
+              <h4 className="text-white font-semibold mb-1">Cookie-kat használunk</h4>
               <p className="text-gray-300 text-sm">
-                Utilizamos cookies para melhorar a sua experiência de navegação e analisar o nosso tráfego. Ao clicar em
-                "Aceitar Todos" concorda com a nossa utilização de cookies.
+                Cookie-kat használunk a böngészési élmény javítására és a forgalom elemzésére. Az „Összes elfogadása”
+                gombra kattintva hozzájárul a cookie-k használatához.
                 <Link href="/cookie-policy" className="text-yellow-500 hover:underline ml-1">
-                  Saber mais
+                  További információ
                 </Link>
               </p>
             </div>
@@ -52,10 +52,10 @@ export function CookieBanner() {
               onClick={rejectCookies}
               className="border-gray-600 hover:bg-gray-800 text-slate-500 bg-transparent"
             >
-              Rejeitar
+              Elutasítás
             </Button>
             <Button size="sm" onClick={acceptCookies} className="bg-yellow-500 hover:bg-yellow-600 text-black">
-              Aceitar Todos
+              Összes elfogadása
             </Button>
           </div>
         </div>

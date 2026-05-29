@@ -55,7 +55,7 @@ export function CasinoModal() {
           <div className="bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-500 text-black text-center py-4 px-6 font-black text-sm md:text-base border-b-2 border-yellow-500">
             <div className="flex items-center justify-center gap-2">
               
-              <p className="tracking-wide">ESCOLHA DO EDITOR ESTA SEMANA</p>
+              <p className="tracking-wide">A SZERKESZTŐ VÁLASZTÁSA EZEN A HÉTEN</p>
               
             </div>
           </div>
@@ -76,7 +76,7 @@ export function CasinoModal() {
 
             <div className="mb-4 sm:mb-6 bg-yellow-500/10 rounded-xl p-4 sm:p-5 border border-yellow-500/20">
               <p className="text-yellow-500 text-xs sm:text-sm mb-2 font-bold uppercase tracking-wide">
-                Bónus de Boas-Vindas Exclusivo
+                Exkluzív üdvözlő bónusz
               </p>
               <div className="text-base sm:text-lg md:text-xl font-bold space-y-1">
                 <div className="text-yellow-400">{topCasino.bonus}</div>
@@ -107,11 +107,11 @@ export function CasinoModal() {
                 handleModalClick()
               }}
             >
-              JOGAR AGORA →
+              JÁTÉK MOST →
             </Button>
 
             <p className="text-xs text-gray-500 text-center mt-3 sm:mt-4">
-              * Aplicam-se os Termos e Condições. Apenas 18+.
+              * Az Általános Szerződési Feltételek érvényesek. Csak 18+.
             </p>
           </CardContent>
         </Card>

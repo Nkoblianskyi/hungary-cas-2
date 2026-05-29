@@ -4,18 +4,18 @@ export function Benefits() {
   const benefits = [
     {
       icon: Gift,
-      title: "Bónus Exclusivos",
-      description: "Obtenha as melhores ofertas de boas-vindas e apostas grátis",
+      title: "Exkluzív bónuszok",
+      description: "A legjobb üdvözlő ajánlatok és ingyenes fogadások",
     },
     {
       icon: TrendingUp,
-      title: "Odds Elevadas",
-      description: "As melhores odds nos eventos desportivos mais populares",
+      title: "Magas oddsok",
+      description: "A legjobb oddsok a legnépszerűbb sporteseményeken",
     },
     {
       icon: Users,
-      title: "Casas de Apostas Verificadas",
-      description: "Apenas operadores licenciados e confiáveis com excelente reputação",
+      title: "Ellenőrzött fogadóirodák",
+      description: "Csak engedélyezett és megbízható üzemeltetők kiváló hírnévvel",
     },
   ]
 

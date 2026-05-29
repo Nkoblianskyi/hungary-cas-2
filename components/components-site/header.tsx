@@ -7,7 +7,7 @@ export function Header() {
       <div className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-center h-10 md:h-10">
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-            <Image src="/logo.png" alt="Logo" width={50} height={50} />
+            <Image src="/logo.png" alt="Magyarország legjobb kaszinói" width={50} height={50} />
             
           </Link>
         </div>

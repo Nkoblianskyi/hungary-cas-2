@@ -4,6 +4,8 @@ export interface Casino {
   logo: string
   rating: number
   bonus: string
+  dopBonus?: string
+  reviewCount: number
   features: string[]
   isTopChoice?: boolean
   url: string
@@ -92,13 +94,15 @@ const baseCasinos: BaseCasino[] = [
   },
 ]
 
-const ratingsByRank = [9.8, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8]
+const ratingsByRank = [9.8, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9]
+const reviewCountsByRank = [3247, 2891, 2654, 2412, 2187, 1953, 1724, 1589, 1432, 1287]
 
 function assignRanks(list: BaseCasino[]): Casino[] {
   return list.map((c, i) => ({
     ...c,
     rank: i + 1,
     rating: ratingsByRank[i] ?? 8.5,
+    reviewCount: reviewCountsByRank[i] ?? 1000,
     isTopChoice: i === 0,
   }))
 }

@@ -6,18 +6,18 @@ export function Hero() {
   // Get current month and year
   const currentDate = new Date()
   const monthNames = [
-    "Janeiro",
-    "Fevereiro",
-    "Março",
-    "Abril",
-    "Maio",
-    "Junho",
-    "Julho",
-    "Agosto",
-    "Setembro",
-    "Outubro",
-    "Novembro",
-    "Dezembro",
+    "január",
+    "február",
+    "március",
+    "április",
+    "május",
+    "június",
+    "július",
+    "augusztus",
+    "szeptember",
+    "október",
+    "november",
+    "december",
   ]
   const currentMonth = monthNames[currentDate.getMonth()]
   const currentYear = currentDate.getFullYear()
@@ -37,22 +37,22 @@ export function Hero() {
           {/* </CHANGE> */}
           <div className="mb-1 md:mb-4">
             <h1 className="text-base sm:text-lg md:text-4xl lg:text-5xl font-bold tracking-tight mb-1 md:mb-3 leading-tight">
-              <span className="text-white">Melhores Casinos </span>
-              <span className="text-red-500">Portugal </span>
+              <span className="text-white">Magyarország </span>
+              <span className="text-red-500">Legjobb Kaszinói </span>
             </h1>
           </div>
 
           <div className="inline-flex items-center gap-1.5 bg-yellow-500/10 border border-yellow-500/30 rounded-full px-2 py-0.5 md:px-4 md:py-1.5 mb-1.5 md:mb-3">
               <div className="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-yellow-500" />
               <span className="text-[7px] md:text-sm text-yellow-500 font-medium tracking-wide">
-                ATUALIZADO {currentMonth.toUpperCase()} {currentYear}
+                FRISSÍTVE {currentMonth.toUpperCase()} {currentYear}
               </span>
             </div>
 
           <p className="text-[8px] md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto mb-1.5 md:mb-5 leading-snug md:leading-relaxed px-0.5">
-            Descubra os <span className="text-yellow-500 font-medium">melhores bónus</span>, 
-            <span className="text-yellow-500 font-medium"> levantamentos rápidos</span> e 
-            <span className="text-yellow-500 font-medium"> casinos confiáveis</span>
+            Fedezze fel a <span className="text-yellow-500 font-medium">legjobb bónuszokat</span>, 
+            <span className="text-yellow-500 font-medium"> gyors kifizetéseket</span> és 
+            <span className="text-yellow-500 font-medium"> megbízható kaszinókat</span>
           </p>
 
           <div className="block md:hidden mb-0.5">

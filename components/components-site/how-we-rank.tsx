@@ -7,7 +7,7 @@ import { Button } from "./ui/button"
 import { getTopCasino } from "./data/casinos"
 import Link from 'next/link'
 
-/** Рендер однієї частково заповненої зірки */
+/** Részben kitöltött csillag */
 function PartialStar({
   fillPercent,
   size = "h-4 w-4",
@@ -29,7 +29,7 @@ function PartialStar({
   )
 }
 
-/** Рейтинг у зірках 0..5 із кроком 0.2 (на основі rating 0..10) */
+/** Csillagos értékelés 0..5 (rating 0..10 alapján) */
 function StarRating({
   rating10,
   size = "h-4 w-4",
@@ -51,33 +51,33 @@ function StarRating({
 export function HowWeRank() {
   const criteria = [
     {
-      title: "Licença & Segurança",
-      description: "Avaliamos apenas casinos com licenças válidas de autoridades reconhecidas",
+      title: "Licenc és biztonság",
+      description: "Csak érvényes engedéllyel rendelkező, elismert hatóságok által felügyelt kaszinókat értékelünk",
       weight: "25%",
     },
     {
-      title: "Seleção de Jogos",
-      description: "Variedade e qualidade de slots, jogos de mesa e opções de dealer ao vivo",
+      title: "Játékkínálat",
+      description: "Nyerőgépek, asztali játékok és élő osztós lehetőségek változatossága és minősége",
       weight: "20%",
     },
     {
-      title: "Bónus & Promoções",
-      description: "Bónus de boas-vindas, promoções contínuas e condições de apostas justas",
+      title: "Bónuszok és promóciók",
+      description: "Üdvözlő bónuszok, folyamatos promóciók és tisztességes megforgatási feltételek",
       weight: "20%",
     },
     {
-      title: "Apoio ao Cliente",
-      description: "Disponibilidade 24/7, tempos de resposta e qualidade do suporte",
+      title: "Ügyfélszolgálat",
+      description: "24/7 elérhetőség, válaszidő és a támogatás minősége",
       weight: "15%",
     },
     {
-      title: "Métodos de Pagamento",
-      description: "Saques rápidos, múltiplas opções de pagamento e taxas baixas",
+      title: "Fizetési módok",
+      description: "Gyors kifizetések, több fizetési lehetőség és alacsony díjak",
       weight: "10%",
     },
     {
-      title: "Experiência do Utilizador",
-      description: "Design do website, compatibilidade móvel e facilidade de uso geral",
+      title: "Felhasználói élmény",
+      description: "Weboldal kialakítása, mobil kompatibilitás és általános használhatóság",
       weight: "10%",
     },
   ]
@@ -90,10 +90,10 @@ export function HowWeRank() {
         {/* How We Rank Section */}
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Como Avaliamos os Casinos
+            Hogyan értékeljük a kaszinókat
           </h2>
           <p className="text-sm md:text-base text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            A nossa equipa de especialistas utiliza um sistema de avaliação abrangente para avaliar todos os aspetos dos casinos online e garantir que recebe as avaliações mais precisas e confiáveis.
+            Szakértő csapatunk átfogó értékelési rendszert használ az online kaszinók minden aspektusának vizsgálatára, hogy a legpontosabb és legmegbízhatóbb értékeléseket kapja.
           </p>
         </div>
 
@@ -128,10 +128,10 @@ export function HowWeRank() {
         {/* Our Choice Section */}
         <div className="text-center mb-6 md:mb-8">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            A Nossa Escolha Principal
+            Fő választásunk
           </h2>
           <p className="text-sm md:text-base text-gray-400 max-w-3xl mx-auto">
-            Após testes e avaliações minuciosas, este casino destaca-se como a nossa recomendação #1 para jogadores portugueses.
+            Alapos tesztelés és értékelés után ez a kaszinó kiemelkedik #1 ajánlásunkként magyar játékosok számára.
           </p>
         </div>
 
@@ -159,7 +159,7 @@ export function HowWeRank() {
             
             <CardContent className="p-5 md:p-8 relative z-10">
               <Badge className="absolute top-0 left-0 bg-yellow-500 text-black font-bold text-xs px-3 py-1 rounded-tl-lg rounded-br-lg">
-                MELHOR CASINO
+                LEGJOBB KASZINÓ
               </Badge>
               
               <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 pt-6 md:pt-0">
@@ -176,7 +176,7 @@ export function HowWeRank() {
 
                 <div className="flex-1 text-center min-w-0">
                   <div className="text-xs text-gray-400 mb-2 uppercase tracking-wide">
-                    Bónus de Boas-Vindas
+                    Üdvözlő bónusz
                   </div>
                   <div className="text-yellow-500 font-bold text-xl md:text-2xl">
                     {topCasino.bonus}
@@ -194,7 +194,7 @@ export function HowWeRank() {
                     <span className="text-white font-bold text-2xl">{topCasino.rating.toFixed(1)}</span>
                   </div>
                   <div className="text-gray-400 text-sm">
-                    {topCasino.reviewCount} avaliações
+                    {topCasino.reviewCount} értékelés
                   </div>
                 </div>
 
@@ -202,7 +202,7 @@ export function HowWeRank() {
                   <Button
                     className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-8 py-4 text-sm w-full md:w-auto transition-all duration-300"
                   >
-                    JOGAR AGORA
+                    JÁTÉK MOST
                   </Button>
                 </div>
               </div>
