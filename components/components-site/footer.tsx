@@ -19,58 +19,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-wrap justify-center items-center gap-6 mb-8 pb-8 border-b border-gray-800">
-          <Link
-            href="https://www.szerencsejatek.hu"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white/5 hover:bg-white/10 border border-yellow-500/20 rounded-lg p-4 transition-all hover:border-yellow-500/40"
-          >
-            <img
-              src="/srij.svg"
-              alt="Szerencsejáték Zrt."
-              className="h-10 md:h-12 w-auto object-contain"
-            />
-          </Link>
-          <Link
-            href="https://jatekfugoseg.hu"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white hover:bg-white/95 border border-yellow-500/20 rounded-lg p-4 transition-all hover:border-yellow-500/40"
-          >
-            <img
-              src="/icad.png"
-              alt="Játékfüggőség"
-              className="h-10 md:h-12 w-auto object-contain"
-            />
-          </Link>
-          <Link
-            href="https://www.gamcare.org.uk"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white hover:bg-white/95 border border-yellow-500/20 rounded-lg p-4 transition-all hover:border-yellow-500/40"
-          >
-            <img src="/gamecare.svg" alt="GamCare" className="h-10 md:h-12 w-auto object-contain" />
-          </Link>
-          <Link
-            href="https://www.gambleaware.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white hover:bg-white/95 border border-yellow-500/20 rounded-lg p-4 transition-all hover:border-yellow-500/40"
-          >
-            <img src="/gamble.webp" alt="GambleAware" className="h-10 md:h-12 w-auto object-contain" />
-          </Link>
-          <Link
-            href="https://jatekfugoseg.hu"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white/5 hover:bg-white/10 border border-yellow-500/20 rounded-lg p-4 transition-all hover:border-yellow-500/40"
-          >
-            <img
-              src="/jogo2.png"
-              alt="Felelős játék"
-              className="h-10 md:h-12 w-auto object-contain"
-            />
-          </Link>
+
           <div className="bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-xl border-2 border-yellow-500">
             18+
           </div>
